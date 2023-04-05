@@ -5,26 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .mainmenubtn {
+            background-color: skyblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding:20px;
+            margin-top:20px;
+        }
+        .mainmenubtn:hover {
+            background-color: blue;
+            }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-child {
+            display: none;
+            background-color: skyblue;
+            min-width: 200px;
+        }
+        .dropdown-child a {
+            color: blue;
+            padding: 20px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-child {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <!-- HEADER -->
-    <header class="header" role="banner">
-	    <div class="container">
-		    <span class="control-menu visible-xs ico-menu-2"></span>
-		    <span class="control-sidebar visible-xs ico-list"></span>
-		    <h1 class="project-name"><a href="#">Email Marketing</a></h1>
-		    <a href="#" class="help-suggestions ico-help-circle hidden-xs">Ajuda e Sugestões</a>
-		
-		    <div class="dropdown hidden-xs">
-			    <a href="#" data-toggle="dropdown" class="title-dropdown">emkt2013</a>
-			    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				    <li><a href="#" role="menuitem">Option 1</a></li>
-				    <li><a href="#" role="menuitem">Option 2</a></li>
-				    <li><a href="#" role="menuitem">Option 3</a></li>
-			    </ul>
-		    </div>
-	    </div>
-    </header>
+    <div class="dropdown">
+        <button class="mainmenubtn">Main Menu</button>
+        <div class="dropdown-child">
+            <a href="http://wwww.yourdomain.com/page1.html">Sub Menu 1</a>
+            <a href="http://wwww.yourdomain.com/page2.html">Sub Menu 2</a>
+            <a href="http://wwww.yourdomain.com/page3.html">Sub Menu 3</a>
+            <a href="http://wwww.yourdomain.com/page4.html">Sub Menu 4</a>
+            <a href="http://wwww.yourdomain.com/page5.html">Sub Menu 5</a>
+        </div>
+    </div>
     <!-- FIM DO HEADER -->
  
     <!-- MENU PRINCIPAL -->
