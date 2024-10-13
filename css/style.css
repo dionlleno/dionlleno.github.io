@@ -11,6 +11,10 @@ body, html {
     padding: 5px;
 }
 
+hr{
+    
+}
+
 header{
     position: sticky;
     top: 0;
