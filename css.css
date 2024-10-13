@@ -1,0 +1,103 @@
+body{
+    background-color: #f9f9f9;
+    color: #f9f9f9;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+    float: left;
+}
+
+header nav ul li{
+    margin: 10px;
+}
+
+header nav ul li a{
+    color: #990000;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.img-logo{
+    width: 150px;
+    height: 50px;
+}
+
+.img-lista{
+    width: 100px;
+}
+
+.banner{
+    margin: 0;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+.listas-produtos{
+    display: list-item;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.listas-produtos div{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.listas-produtos div ul{
+    padding: 0;
+    align-items: center;
+    list-style-type: none;
+}
+
+.listas-produtos div ul li{
+    display: inline;
+}
+
+.listas-produtos div ul li a{
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+footer p{
+    margin: 10px 0;
+}
+
+footer p a{
+    text-decoration: none;
+    color: #990000;;
+}
+
+footer div{
+    text-align: center;
+}
+
+footer div a img{
+    width: 30px;
+    padding: 10px;
+}
