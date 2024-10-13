@@ -8,65 +8,70 @@
 </head>
 <body>
     <header>
-        <img class="img-logo" src="imagens/capa.png" alt="Logo da Loja de Joias" style="width: 250px;">
+        <a href="index.html"><img class="img-logo" src="logo.svg" alt="Logo da Loja de Joias" style="width: 250px;"></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
                 <li><a href="login.html">Login</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
             </ul>
-    </header>    
-    <div>  
-        <h1>Carrinho de Compras</h1>    
-        <table>   
-            <thead> 
-                <tr> 
-                    <th>Imagem</th>   
-                    <th>Descrição</th> 
-                    <th>Quantidade</th> 
-                    <th>Preço</th>     
-                    <th>Total</th>  
-                    <th>Ação</th> 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><img width="100px" src="imagens/anel.png" alt="Anel"></td>
-                    <td>Anel de Ouro</td>
-                    <td><input type="number" value="1" min="1" max="10"></td>
-                    <td>R$ 150,00</td>
-                    <td>R$ 150,00</td>
-                    <td><a href="#" class="button">Remover</a></td>
-                </tr>
-                <tr>
-                    <td><img width="100px" src="imagens/brincos.png" alt="Brinco"></td>
-                    <td>Brincos de Prata</td>
-                    <td><input type="number" value="2" min="1" max="10"></td>
-                    <td>R$ 80,00</td>
-                    <td>R$ 160,00</td>
-                    <td><a href="#" class="button">Remover</a></td>
-                </tr>
-                <tr>
-                    <td><img width="100px" src="imagens/colar.png" alt="Colar"></td>
-                    <td>Colar de Pérolas</td>
-                    <td><input type="number" value="1" min="1" max="10"></td>
-                    <td>R$ 200,00</td>
-                    <td>R$ 200,00</td>
-                    <td><a href="#" class="button">Remover</a></td>
-                </tr> 
-            </tbody> 
-            <tfoot>
-                <tr>
-                    <td colspan="4"><strong>Total</strong></td>
-                    <td>R$ 510,00</td>
-                    <td></td> 
-                </tr>
-            </tfoot>  
-        </table>
-        <a href="#" class="button">Atualizar Carrinho</a>    
-        <a href="#" class="button">Finalizar Compra</a>
+    </header>
+    <br>
+    <div class="carrinho-container">
+        <div class="carrinho">  
+            <h1>Carrinho de Compras</h1>    
+            <table>   
+                <thead> 
+                    <tr> 
+                        <th>Imagem</th>   
+                        <th>Descrição</th> 
+                        <th>Quantidade</th> 
+                        <th>Preço</th>     
+                        <th>Total</th>  
+                        <th>Ação</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img width="100px" src="imagens/anel.png" alt="Anel"></td>
+                        <td>Anel de Ouro</td>
+                        <td><input type="number" value="1" min="1" max="10"></td>
+                        <td>R$ 150,00</td>
+                        <td>R$ 150,00</td>
+                        <td><a href="#" class="button">Remover</a></td>
+                    </tr>
+                    <tr>
+                        <td><img width="100px" src="imagens/brincos.png" alt="Brinco"></td>
+                        <td>Brincos de Prata</td>
+                        <td><input type="number" value="2" min="1" max="10"></td>
+                        <td>R$ 80,00</td>
+                        <td>R$ 160,00</td>
+                        <td><a href="#" class="button">Remover</a></td>
+                    </tr>
+                    <tr>
+                        <td><img width="100px" src="imagens/colar.png" alt="Colar"></td>
+                        <td>Colar de Pérolas</td>
+                        <td><input type="number" value="1" min="1" max="10"></td>
+                        <td>R$ 200,00</td>
+                        <td>R$ 200,00</td>
+                        <td><a href="#" class="button">Remover</a></td>
+                    </tr> 
+                </tbody> 
+                <tfoot>
+                    <tr>
+                        <td colspan="4"><strong>Total</strong></td>
+                        <td>R$ 510,00</td>
+                        <td></td> 
+                    </tr>
+                </tfoot>  
+            </table>
+            <button class="button">Atualizar Carrinho</button>    
+            <button class="button">Finalizar Compra</button>
+        </div>
     </div>
+    <br>
+    <hr class="separador">
     <footer>
         <p>&copy; 2024 Loja de Joias. Todos os direitos reservados.</p>
         <p><a style="text-decoration: none; color: #990000;" href="#">Termos de Serviço</a> | <a style="text-decoration: none; color: #990000;" href="#">Política de Privacidade</a></p>

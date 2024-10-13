@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html{
+    font-family: "Inter, sans-serif";
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+    float: left;
+}
+
+header nav ul li{
+    margin: 10px;
+}
+
+header nav ul li a{
+    color: #990000;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.img-logo{
+    width: 150px;
+    height: 50px;
+}
+
+/*************/
+.box-banner {
+    position: relative; /* Para posicionar os botões */
+    max-width: 900px; /* Largura máxima do carrossel */
+    margin: auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Esconde imagens fora do contêiner */
+}
+
+.carousel {
+    display: flex; /* Usa Flexbox para alinhar as imagens */
+    transition: transform 0.5s ease; /* Transição suave entre slides */
+}
+
+.img-banner {
+    width: 100%; /* Faz com que as imagens ocupem toda a largura do carrossel */
+    max-width: 900px; /* Limita a largura máxima das imagens */
+    display: none; /* Esconde as imagens inicialmente */
+}
+
+.img-banner.active {
+    display: block; /* Mostra apenas a imagem ativa */
+}
+
+.box-banner button{
+    position: absolute; /* Posiciona os botões sobre o carrossel */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição do botão */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    border: none; /* Remove bordas */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+.prev {
+    left: 10px; /* Posiciona o botão "anterior" à esquerda */
+}
+
+.next {
+    right: 10px; /* Posiciona o botão "próximo" à direita */
+}
+
+/*************/
+
+.listas-produtos{
+    display: list-item;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.listas-produtos div{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.listas-produtos div ul{
+    padding: 0;
+    align-items: center;
+    list-style-type: none;
+}
+
+.listas-produtos div ul li{
+    display: inline;
+}
+
+.listas-produtos div ul li a{
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.rodape{
+    color: #990000;
+    background-color: #ffffff;
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+    margin: 0;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+footer p{
+    margin: 10px 0;
+}
+
+footer p a{
+    text-decoration: none;
+    color: #990000;;
+}
+
+footer div{
+    text-align: center;
+}
+
+footer div a img{
+    width: 30px;
+    padding: 10px;
+}

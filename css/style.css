@@ -1,11 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html{
+    font-family: "Inter, sans-serif";
+    color: #990000;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+}
+
 header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     width: 100%;
     height: 50px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 30px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul{
@@ -23,7 +40,14 @@ header nav ul li{
 header nav ul li a{
     color: #990000;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+header nav ul li a:hover{
+    background-color: #990000;
+    color: #ffffff;
+    border: 30px;
+    border-radius: 15%;
 }
 
 .img-logo{
@@ -31,51 +55,114 @@ header nav ul li a{
     height: 50px;
 }
 
-.img-lista{
-    width: 100px;
+/*************/
+.box-banner {
+    position: relative; /* Para posicionar os botões */
+    max-width: 900px; /* Largura máxima do carrossel */
+    margin: auto; /* Centraliza o carrossel */
+    overflow: hidden; /* Esconde imagens fora do contêiner */
 }
 
-.banner{
-    margin: 0;
+.carousel {
+    display: flex; /* Usa Flexbox para alinhar as imagens */
+    transition: transform 0.5s ease; /* Transição suave entre slides */
 }
 
-.banner img{
-    width: 100%;
-    height: auto;
+.img-banner {
+    width: 100%; /* Faz com que as imagens ocupem toda a largura do carrossel */
+    max-width: 900px; /* Limita a largura máxima das imagens */
+    display: none; /* Esconde as imagens inicialmente */
 }
 
-.listas-produtos{
-    display: list-item;
-    justify-content: center;
+.img-banner.active {
+    display: block; /* Mostra apenas a imagem ativa */
+}
+
+.box-banner button{
+    position: absolute; /* Posiciona os botões sobre o carrossel */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição do botão */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    border: none; /* Remove bordas */
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+.prev {
+    left: 10px; /* Posiciona o botão "anterior" à esquerda */
+}
+
+.next {
+    right: 10px; /* Posiciona o botão "próximo" à direita */
+}
+
+/*************/
+
+.listas-produtos {
+    display: flex;
+    justify-content: space-around;
     text-align: center;
-    align-items: center;
-    height: 100dvh;
 }
 
-.listas-produtos div{
-    padding: 0;
-    margin: 0;
+.lista-aneis, .lista-brincos, .lista-colar .lista-relogio{
     text-align: center;
 }
 
-.listas-produtos div ul{
-    padding: 0;
-    align-items: center;
+.lista-aneis ul, .lista-brincos ul, .lista-colar ul,.lista-relogio ul{
+    padding: 0 0 0 0;
     list-style-type: none;
 }
 
-.listas-produtos div ul li{
-    display: inline;
+.lista-aneis li, .lista-brincos li, .lista-colar li, .lista-relogio li{
+    margin: 20px;
 }
 
-.listas-produtos div ul li a{
-    font-family: sans-serif;
+.lista-aneis p, .lista-brincos p, .lista-colar p, .lista-relogio p{
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333; /* ou a cor que preferir */
+    margin-top: 5px; /* Espaçamento entre a imagem e o preço */
+}
+
+.lista-produtos-horizontal {
+    display: flex; /* Alinha os itens em linha */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte se necessário */
+    list-style: none; /* Remove as marcas de lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 20px 0; /* Espaçamento entre as seções */
+}
+
+.produto {
+    border: 2px solid #ccc; /* Cor e espessura do contorno */
+    border-radius: 8px; /* Bordas arredondadas, se desejar */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 10px; /* Espaçamento entre os produtos */
+    transition: box-shadow 0.3s; /* Transição suave para efeito hover */
+    flex: 0 1 30%; /* Faz os produtos ocuparem 30% do espaço, podendo ajustar */
+}
+
+.produto:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */
+}
+
+.produto a{
     text-decoration: none;
 }
 
+.img-lista {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
 .rodape{
     color: #990000;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     text-align: center;
     flex: 1;
     padding: 10px;
@@ -85,7 +172,7 @@ header nav ul li a{
 footer{
     text-align: center;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 footer p{
@@ -104,4 +191,62 @@ footer div{
 footer div a img{
     width: 30px;
     padding: 10px;
+}
+
+.carrinho-container {
+    color: #990000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o conteúdo seja centralizado verticalmente na tela inteira */
+}
+
+.carrinho {
+    width: 80%; /* Controla a largura do carrinho */
+    max-width: 800px; /* Define uma largura máxima */
+    background-color: #f9f9f9; /* Opcional: cor de fundo do carrinho */
+    padding: 20px; /* Espaçamento interno do carrinho */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar o carrinho */
+}
+
+.carrinho table th, 
+.carrinho table td {
+    padding: 15px 20px; /* Ajuste o valor para controlar o espaçamento entre as colunas */
+    text-align: center;   /* Alinha o texto à esquerda, opcional */
+}
+
+.button {
+    background-color: #990000; /* Cor de fundo do botão */
+    color: white;              /* Cor do texto */
+    border: none;              /* Remove bordas */
+    padding: 10px 20px;        /* Espaçamento interno do botão */
+    text-align: center;        /* Centraliza o texto */
+    text-decoration: none;     /* Remove sublinhado */
+    display: inline-block;     /* Mantém os botões em linha */
+    font-size: 16px;           /* Tamanho do texto */
+    margin: 10px 5px;          /* Espaçamento externo */
+    cursor: pointer;           /* Muda o cursor ao passar sobre o botão */
+    border-radius: 5px;        /* Bordas arredondadas */
+}
+
+.button:hover {
+    background-color: #990000; /* Cor do botão ao passar o mouse */
+}
+
+.login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Para centralizar verticalmente */
+}
+
+.login-painel {
+    background-color: #f9f9f9; /* Cor de fundo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Largura da caixa */
+    text-align: center;
 }
