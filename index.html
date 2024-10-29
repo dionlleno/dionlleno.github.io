@@ -1,137 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>HOME - PAINITE JOIAS</title>
+    <meta name="description"
+        content="Painite Joias - A sua loja de joias exclusivas, com uma variedade de anéis, brincos, colares e relógios.">
 </head>
+
 <body>
     <header>
         <a href="index.html"><img class="img-logo" src="logo.svg" alt="Logo da Loja de Joias" style="width: 250px;"></a>
-        <nav>
-            <ul>
+        <nav class="menu">
+            <ul class="menu-lista">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="carrinho.html">Carrinho</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
             </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
     </header>
+    <br>
+
     <div class="box-banner">
         <div class="carousel">
-            <img class="img-banner" src="imagens/banner01.png" alt="Banner 1">
-            <img class="img-banner" src="imagens/banner02.png" alt="Banner 2">
-            <img class="img-banner" src="imagens/banner03.png" alt="Banner 3">
+            <img class="img-banner" src="imagens/banner01.png" alt="Banner de promoção de joias 1">
+            <img class="img-banner" src="imagens/banner02.png" alt="Banner de promoção de joias 2">
+            <img class="img-banner" src="imagens/banner03.png" alt="Banner de promoção de joias 3">
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
+
     <br>
     <hr class="separador">
+    <br>
     <div class="listas-produtos">
+        <!-- Seção de Anéis -->
         <div class="lista-aneis">
             <h1>Aneis</h1>
             <ul>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/anel.png" alt="anel de ouro">
-                        <p>R$ 150,00</p>
+                        <img class="img-lista" src="imagens/anel.png" alt="Anel de ouro com detalhes finos">
+                        <p>Anel de Ouro - R$ 150,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/anel.png" alt="anel de ouro">
-                        <p>R$ 150,00</p>
+                        <img class="img-lista" src="imagens/anel.png" alt="Anel de prata com pedra preciosa">
+                        <p>Anel de Prata - R$ 180,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/anel.png" alt="anel de ouro">
-                        <p>R$ 150,00</p>
+                        <img class="img-lista" src="imagens/anel.png" alt="Anel de ouro branco com detalhes">
+                        <p>Anel de Ouro Branco - R$ 200,00</p>
                     </a>
                 </li>
             </ul>
         </div>
+
+        <!-- Seção de Brincos -->
         <div class="lista-brincos">
             <h1>Brincos</h1>
             <ul>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/brincos.png" alt="brincos de pérola">
-                        <p>R$ 80,00</p>
+                        <img class="img-lista" src="imagens/brincos.png" alt="Brincos de pérola com fecho de prata">
+                        <p>Brincos de Pérola - R$ 80,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/brincos.png" alt="brincos de pérola">
-                        <p>R$ 80,00</p>
+                        <img class="img-lista" src="imagens/brincos.png" alt="Brincos de ouro com pedra de rubi">
+                        <p>Brincos de Rubi - R$ 120,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/brincos.png" alt="brincos de pérola">
-                        <p>R$ 80,00</p>
+                        <img class="img-lista" src="imagens/brincos.png" alt="Brincos de prata com zircônia">
+                        <p>Brincos de Zircônia - R$ 90,00</p>
                     </a>
                 </li>
             </ul>
         </div>
+
+        <!-- Seção de Colares -->
         <div class="lista-colar">
             <h1>Colares</h1>
             <ul>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/colar.png" alt="colar de pérolas">
-                        <p>R$ 250,00</p>
+                        <img class="img-lista" src="imagens/colar.png" alt="Colar de pérolas brancas">
+                        <p>Colar de Pérolas - R$ 250,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/colar.png" alt="colar de pérolas">
-                        <p>R$ 250,00</p>
+                        <img class="img-lista" src="imagens/colar.png" alt="Colar de ouro com pingente">
+                        <p>Colar de Ouro - R$ 300,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/colar.png" alt="colar de pérolas">
-                        <p>R$ 250,00</p>
+                        <img class="img-lista" src="imagens/colar.png" alt="Colar de prata com ametista">
+                        <p>Colar de Prata - R$ 220,00</p>
                     </a>
                 </li>
             </ul>
         </div>
+
+        <!-- Seção de Relógios -->
         <div class="lista-relogio">
-            <h1>Relogios</h1>
+            <h1>Relógios</h1>
             <ul>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/relogio.png" alt="relogio de pulso">
-                        <p>R$ 250,00</p>
+                        <img class="img-lista" src="imagens/relogio.png"
+                            alt="Relógio de pulso clássico com pulseira de couro">
+                        <p>Relógio Clássico - R$ 250,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/relogio.png" alt="relogio de pulso">
-                        <p>R$ 250,00</p>
+                        <img class="img-lista" src="imagens/relogio.png" alt="Relógio esportivo com cronômetro">
+                        <p>Relógio Esportivo - R$ 300,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/relogio.png" alt="relogio de pulso">
-                        <p>R$ 250,00</p>
+                        <img class="img-lista" src="imagens/relogio.png"
+                            alt="Relógio de aço inoxidável com mostrador azul">
+                        <p>Relógio de Aço - R$ 350,00</p>
                     </a>
                 </li>
             </ul>
         </div>
     </div>
+
     <hr class="separador">
+
     <footer>
         <p>&copy; 2024 Loja de Joias. Todos os direitos reservados.</p>
-        <p><a href="service_term.html">Termos de Serviço</a> | <a href="privacidade_term.html">Política de Privacidade</a></p>
+        <p><a href="service_term.html">Termos de Serviço</a> | <a href="privacidade_term.html">Política de
+                Privacidade</a></p>
         <div>
-            <a href="#"><img src="imagens/facebook.png"  alt="Facebook"  style="width: 30px;"></a>
-            <a href="#"><img src="imagens/instagram.png" alt="Instagram" style="width: 30px;"></a>
-            <a href="#"><img src="imagens/twitter.png"   alt="Twitter"   style="width: 30px;"></a>
+            <a href="#"><img src="imagens/facebook.png" alt="Ícone do Facebook" style="width: 30px;"></a>
+            <a href="#"><img src="imagens/instagram.png" alt="Ícone do Instagram" style="width: 30px;"></a>
+            <a href="#"><img src="imagens/twitter.png" alt="Ícone do Twitter" style="width: 30px;"></a>
         </div>
     </footer>
+
     <script src="js/carrossel.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
