@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/finalizar.css">
+    <title>Finalizar Compra - PAINITE JOIAS</title>
+    <script src="js/script.js" defer></script>
+</head>
+<body onload="carregarResumoPedido()">
+    <!-- Carrega o Header -->
+    <div id="header"></div>
+
+    <!-- Conteúdo Principal da Finalização da Compra -->
+    <div class="finalizar-container">
+        <h1>Finalizar Compra</h1>
+
+        <!-- Resumo do Pedido -->
+        <div class="resumo-carrinho">
+            <h2>Resumo do Pedido</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="resumo-pedido">
+                    <!-- Os itens serão carregados dinamicamente -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Total Geral</strong></td>
+                        <td id="total-geral"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Opções de Pagamento -->
+        <div class="opcoes-pagamento">
+            <h2>Forma de Pagamento</h2>
+            <label>
+                <input type="radio" name="pagamento" value="pix" checked> Pix
+            </label>
+        </div>
+
+        <!-- Botão para Confirmar a Compra -->
+        <button class="button" onclick="confirmarCompra()">Confirmar Compra</button>
+    </div>
+
+    <!-- Notificação Visual -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Carrega o Footer -->
+    <div id="footer"></div>
+</body>
+</html>

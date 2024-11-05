@@ -1,0 +1,79 @@
+.cadastro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centraliza verticalmente */
+    background-color: #dbdbdb;
+    padding: 20px;
+}
+
+.cadastro-box {
+    max-width: 400px;
+    width: 100%; /* Para manter responsivo */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-box h1 {
+    text-align: center;
+    color: #990000;
+    margin-bottom: 20px;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cadastro-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.cadastro-form input:focus {
+    outline: none;
+    border-color: #990000;
+    box-shadow: 0 0 5px rgba(153, 0, 0, 0.3);
+}
+
+.button {
+    background-color: #990000;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #b30000;
+    box-shadow: 0 0 10px rgba(153, 0, 0, 0.5);
+}
+
+.cadastro-box p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cadastro-box a {
+    color: #990000;
+    text-decoration: none;
+}
+
+.cadastro-box a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cadastro-box {
+        width: 90%; /* Ajuste para telas menores */
+    }
+}

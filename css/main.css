@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    color: #990000;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Estilos gerais */
+.img-logo {
+    width: 150px;
+    height: 50px;
+}
+
+/* Banner */
+.box-banner {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.img-banner {
+    width: 100%;
+    max-width: 900px;
+    display: none;
+}
+
+.img-banner.active {
+    display: block;
+}
+
+.box-banner button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Produtos */
+.listas-produtos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.listas-produtos > div {
+    flex: 1 1 calc(25% - 20px);
+    max-width: 300px;
+}
+
+.lista-aneis ul,
+.lista-brincos ul,
+.lista-colar ul,
+.lista-relogio ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.lista-aneis li,
+.lista-brincos li,
+.lista-colar li,
+.lista-relogio li {
+    margin: 20px;
+}
+
+.lista-aneis p,
+.lista-brincos p,
+.lista-colar p,
+.lista-relogio p {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.lista-produtos-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.produto {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    transition: box-shadow 0.3s;
+    flex: 0 1 30%;
+}
+
+.produto:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.produto a {
+    text-decoration: none;
+}
+
+.img-lista {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Carrinho */
+.carrinho-container {
+    color: #990000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.carrinho {
+    width: 80%;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho table th,
+.carrinho table td {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.add-to-cart-button {
+    background-color: #cc0000;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(230, 0, 0, 0.5);
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+
+.notification.show {
+    display: block;
+    opacity: 1;
+    top: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .listas-produtos > div {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .menu-lista {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .menu-lista li {
+        margin: 10px 0;
+        list-style: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .listas-produtos > div {
+        flex: 1 1 100%;
+    }
+}
+
+.menu.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

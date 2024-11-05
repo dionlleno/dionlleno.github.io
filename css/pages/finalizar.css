@@ -1,0 +1,58 @@
+.finalizar-container {
+    color: #990000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resumo-carrinho, .opcoes-pagamento {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.resumo-carrinho h2, .opcoes-pagamento h2 {
+    color: #990000;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.resumo-carrinho table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.resumo-carrinho table th, .resumo-carrinho table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.resumo-carrinho table th {
+    background-color: #990000;
+    color: #fff;
+}
+
+.button {
+    background-color: #990000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #b30000;
+    box-shadow: 0 0 10px rgba(153, 0, 0, 0.5);
+}

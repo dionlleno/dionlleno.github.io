@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/cadastro.css">
+    <title>Cadastro - PAINITE JOIAS</title>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="cadastro-container">
+        <div class="cadastro-box">
+            <h1>Cadastro de Usuário</h1>
+            <form class="cadastro-form" action="/painite_joias/php/cadastro.php" method="POST">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <button type="submit" class="button">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

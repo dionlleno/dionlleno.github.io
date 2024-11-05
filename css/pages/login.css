@@ -1,0 +1,99 @@
+/* login.css */
+
+/* Estilização geral */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    background-color: #dbdbdb;
+}
+
+/* Caixa de Login */
+.login-box {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-painel form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-painel input[type="email"],
+.login-painel input[type="password"] {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+/* Efeito de foco nos campos de entrada */
+.login-painel input[type="email"]:focus,
+.login-painel input[type="password"]:focus {
+    outline: none;
+    border-color: #990000;
+    box-shadow: 0 0 5px rgba(153, 0, 0, 0.3);
+}
+
+/* Botão de Envio */
+.login-painel input[type="submit"] {
+    padding: 15px;
+    background-color: #990000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover no botão */
+.login-painel input[type="submit"]:hover {
+    transform: scale(1.05);
+    background-color: #b30000;
+    box-shadow: 0 0 10px rgba(153, 0, 0, 0.5);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .login-box {
+        width: 90%; /* Aumenta a largura para ocupar mais espaço */
+        margin-top: 50px; /* Reduz o espaço superior */
+    }
+}
+
+/* Responsividade para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-box {
+        max-width: 80%; /* Torna o formulário mais largo em tablets */
+        margin-top: 70px;
+    }
+
+    .login-painel input[type="submit"] {
+        font-size: 18px; /* Aumenta um pouco o tamanho do botão */
+    }
+}
+
+/* Responsividade para telas grandes */
+@media (min-width: 1025px) {
+    .login-box {
+        max-width: 350px;
+        margin-top: 100px; /* Espaçamento consistente em telas grandes */
+    }
+
+    .login-painel input[type="email"],
+    .login-painel input[type="password"] {
+        padding: 20px; /* Aumenta o padding para campos maiores */
+    }
+}

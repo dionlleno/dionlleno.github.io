@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.termos-servicos {
+    text-align: justify;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.termos-servicos h3,
+.termos-servicos h4 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+}

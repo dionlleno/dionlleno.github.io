@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Inter, sans-serif";
+    color: #990000;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    /* Remove margens padrão do body */
+    padding: 0;
+    /* Remove preenchimento padrão do body */
+    width: 100vw;
+    /* Define a largura do body para 100% da largura da viewport */
+    height: 100vh;
+    /* Define a altura do body para 100% da altura da viewport */
+    overflow-x: hidden;
+    /* Impede o deslocamento horizontal */
+}
+
+header {
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100dvw;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+
+}
+
+header nav ul li {
+    margin: 10px;
+}
+
+header nav ul li a {
+    color: #990000;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+header nav ul li a:hover {
+    background-color: #990000;
+    color: #ffffff;
+    border-radius: 15%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.img-logo {
+    width: 150px;
+    height: 50px;
+}
+
+/*************/
+.box-banner {
+    position: relative;
+    /* Para posicionar os botões */
+    max-width: 900px;
+    /* Largura máxima do carrossel */
+    margin: auto;
+    /* Centraliza o carrossel */
+    overflow: hidden;
+    /* Esconde imagens fora do contêiner */
+}
+
+.carousel {
+    display: flex;
+    /* Usa Flexbox para alinhar as imagens */
+    transition: transform 0.5s ease;
+    /* Transição suave entre slides */
+}
+
+.img-banner {
+    width: 100%;
+    /* Faz com que as imagens ocupem toda a largura do carrossel */
+    max-width: 900px;
+    /* Limita a largura máxima das imagens */
+    display: none;
+    /* Esconde as imagens inicialmente */
+}
+
+.img-banner.active {
+    display: block;
+    /* Mostra apenas a imagem ativa */
+}
+
+.box-banner button {
+    position: absolute;
+    /* Posiciona os botões sobre o carrossel */
+    top: 50%;
+    /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta a posição do botão */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fundo branco semi-transparente */
+    border: none;
+    /* Remove bordas */
+    padding: 10px;
+    /* Espaçamento interno */
+    cursor: pointer;
+    /* Muda o cursor ao passar sobre o botão */
+}
+
+.prev {
+    left: 10px;
+    /* Posiciona o botão "anterior" à esquerda */
+}
+
+.next {
+    right: 10px;
+    /* Posiciona o botão "próximo" à direita */
+}
+
+/*************/
+
+.listas-produtos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.listas-produtos>div {
+    flex: 1 1 calc(25% - 20px);
+    max-width: 300px;
+}
+
+.lista-aneis,
+.lista-brincos,
+.lista-colar .lista-relogio {
+    text-align: center;
+}
+
+.lista-aneis ul,
+.lista-brincos ul,
+.lista-colar ul,
+.lista-relogio ul {
+    padding: 0 0 0 0;
+    list-style-type: none;
+}
+
+.lista-aneis li,
+.lista-brincos li,
+.lista-colar li,
+.lista-relogio li {
+    margin: 20px;
+}
+
+.lista-aneis p,
+.lista-brincos p,
+.lista-colar p,
+.lista-relogio p {
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    /* ou a cor que preferir */
+    margin-top: 5px;
+    /* Espaçamento entre a imagem e o preço */
+}
+
+.lista-produtos-horizontal {
+    display: flex;
+    /* Alinha os itens em linha */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a linha seguinte se necessário */
+    list-style: none;
+    /* Remove as marcas de lista */
+    padding: 0;
+    /* Remove o preenchimento padrão da lista */
+    margin: 20px 0;
+    /* Espaçamento entre as seções */
+}
+
+.produto {
+    border: 2px solid #ccc;
+    /* Cor e espessura do contorno */
+    border-radius: 8px;
+    /* Bordas arredondadas, se desejar */
+    padding: 10px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o conteúdo */
+    margin: 10px;
+    /* Espaçamento entre os produtos */
+    transition: box-shadow 0.3s;
+    /* Transição suave para efeito hover */
+    flex: 0 1 30%;
+    /* Faz os produtos ocuparem 30% do espaço, podendo ajustar */
+}
+
+.produto:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Efeito de sombra ao passar o mouse */
+}
+
+.produto a {
+    text-decoration: none;
+}
+
+.img-lista {
+    width: 150px;
+    /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.rodape {
+    color: #990000;
+    background-color: #ffffff;
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #990000;
+    ;
+}
+
+footer div {
+    text-align: center;
+}
+
+footer div a img {
+    width: 30px;
+    padding: 10px;
+}
+
+.carrinho-container {
+    color: #990000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Garante que o conteúdo seja centralizado verticalmente na tela inteira */
+}
+
+.carrinho {
+    width: 80%;
+    /* Controla a largura do carrinho */
+    max-width: 800px;
+    /* Define uma largura máxima */
+    background-color: #f9f9f9;
+    /* Opcional: cor de fundo do carrinho */
+    padding: 20px;
+    /* Espaçamento interno do carrinho */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para destacar o carrinho */
+}
+
+.carrinho table th,
+.carrinho table td {
+    padding: 15px 20px;
+    /* Ajuste o valor para controlar o espaçamento entre as colunas */
+    text-align: center;
+    /* Alinha o texto à esquerda, opcional */
+}
+
+.button {
+    background-color: #990000;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do texto */
+    border: none;
+    /* Remove bordas */
+    padding: 10px 20px;
+    /* Espaçamento interno do botão */
+    text-align: center;
+    /* Centraliza o texto */
+    text-decoration: none;
+    /* Remove sublinhado */
+    display: inline-block;
+    /* Mantém os botões em linha */
+    font-size: 16px;
+    /* Tamanho do texto */
+    margin: 10px 5px;
+    /* Espaçamento externo */
+    cursor: pointer;
+    /* Muda o cursor ao passar sobre o botão */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+}
+
+.button:hover {
+    background-color: #990000;
+    /* Cor do botão ao passar o mouse */
+}
+
+.login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    /* Para centralizar verticalmente */
+}
+
+.login-painel {
+    background-color: #f9f9f9;
+    /* Cor de fundo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    /* Largura da caixa */
+    text-align: center;
+}
+
+.container-sobre {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.team-member img {
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.termos-servicos {
+    text-align: justify;
+}
+
+.termos-servicos h3,
+.termos-servicos h4 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .listas-produtos>div {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+        /* Esconde o menu inicialmente */
+        position: fixed;
+        /* Muda para fixed para ficar fixo na tela */
+        top: 0;
+        /* Começa no topo da tela */
+        left: 0;
+        width: 100vw;
+        /* O menu ocupa 100% da largura da tela */
+        height: 100vh;
+        /* O menu ocupa 100% da altura da tela */
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        justify-content: center;
+        /* Centraliza verticalmente o conteúdo */
+        align-items: center;
+        /* Centraliza horizontalmente o conteúdo */
+        overflow: hidden;
+        /* Impede que o conteúdo transborde */
+    }
+
+    .menu-lista {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        /* Remove o preenchimento para evitar corte */
+        margin: 0;
+        /* Remove margens */
+        width: 100%;
+        /* Certifica-se de que a lista ocupe 100% da largura do menu */
+    }
+
+    .menu-lista li {
+        margin: 10px 0;
+        /* Margem vertical entre os itens */
+        list-style: none;
+        /* Remove a bolinha da lista */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .listas-produtos>div {
+        flex: 1 1 100%;
+    }
+
+    .listas-produtos>div {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+        /* Esconde o menu inicialmente */
+        position: fixed;
+        /* Muda para fixed para ficar fixo na tela */
+        top: 0;
+        /* Começa no topo da tela */
+        left: 0;
+        width: 100vw;
+        /* O menu ocupa 100% da largura da tela */
+        height: 100vh;
+        /* O menu ocupa 100% da altura da tela */
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        justify-content: center;
+        /* Centraliza verticalmente o conteúdo */
+        align-items: center;
+        /* Centraliza horizontalmente o conteúdo */
+        overflow: hidden;
+        /* Impede que o conteúdo transborde */
+    }
+
+    .menu-lista {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        /* Remove o preenchimento para evitar corte */
+        margin: 0;
+        /* Remove margens */
+        width: 100%;
+        /* Certifica-se de que a lista ocupe 100% da largura do menu */
+    }
+
+    .menu-lista li {
+        margin: 10px 0;
+        /* Margem vertical entre os itens */
+        list-style: none;
+        /* Remove a bolinha da lista */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+.menu.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu.active+.img-logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}

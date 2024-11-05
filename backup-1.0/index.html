@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>HOME - PAINITE JOIAS</title>
-    <meta name="description" content="Painite Joias - A sua loja de joias exclusivas, com uma variedade de anéis, brincos, colares e relógios.">
+    <meta name="description"
+        content="Painite Joias - A sua loja de joias exclusivas, com uma variedade de anéis, brincos, colares e relógios.">
 </head>
 
 <body>
-    <!-- Header -->
-    <div id="header"></div>
-
+    <header>
+        <a href="index.html"><img class="img-logo" src="logo.svg" alt="Logo da Loja de Joias" style="width: 250px;"></a>
+        <nav class="menu">
+            <ul class="menu-lista">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+    </header>
     <br>
 
     <div class="box-banner">
@@ -27,7 +38,6 @@
     <br>
     <hr class="separador">
     <br>
-
     <div class="listas-produtos">
         <!-- Seção de Anéis -->
         <div class="lista-aneis">
@@ -36,22 +46,19 @@
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/anel.png" alt="Anel de ouro com detalhes finos">
-                        <p>Anel de Ouro <br> R$ 150,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Anel de Ouro', 150, 'imagens/anel.png')">Adicionar ao Carrinho</button>
+                        <p>Anel de Ouro - R$ 150,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/anel.png" alt="Anel de prata com pedra preciosa">
-                        <p>Anel de Prata <br> R$ 180,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Anel de Prata', 180, 'imagens/anel.png')">Adicionar ao Carrinho</button>
+                        <p>Anel de Prata - R$ 180,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/anel.png" alt="Anel de ouro branco com detalhes">
-                        <p>Anel de Ouro Branco <br> R$ 200,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Anel de Ouro Branco', 200, 'imagens/anel.png')">Adicionar ao Carrinho</button>
+                        <p>Anel de Ouro Branco - R$ 200,00</p>
                     </a>
                 </li>
             </ul>
@@ -64,22 +71,19 @@
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/brincos.png" alt="Brincos de pérola com fecho de prata">
-                        <p>Brincos de Pérola <br> R$ 80,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Brincos de Pérola', 80, 'imagens/brincos.png')">Adicionar ao Carrinho</button>
+                        <p>Brincos de Pérola - R$ 80,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/brincos.png" alt="Brincos de ouro com pedra de rubi">
-                        <p>Brincos de Rubi <br> R$ 120,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Brincos de Rubi', 120, 'imagens/brincos.png')">Adicionar ao Carrinho</button>
+                        <p>Brincos de Rubi - R$ 120,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/brincos.png" alt="Brincos de prata com zircônia">
-                        <p>Brincos de Zircônia <br> R$ 90,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Brincos de Zircônia', 90, 'imagens/brincos.png')">Adicionar ao Carrinho</button>
+                        <p>Brincos de Zircônia - R$ 90,00</p>
                     </a>
                 </li>
             </ul>
@@ -92,22 +96,19 @@
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/colar.png" alt="Colar de pérolas brancas">
-                        <p>Colar de Pérolas <br> R$ 250,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Colar de Pérolas', 250, 'imagens/colar.png')">Adicionar ao Carrinho</button>
+                        <p>Colar de Pérolas - R$ 250,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/colar.png" alt="Colar de ouro com pingente">
-                        <p>Colar de Ouro <br> R$ 300,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Colar de Ouro', 300, 'imagens/colar.png')">Adicionar ao Carrinho</button>
+                        <p>Colar de Ouro - R$ 300,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/colar.png" alt="Colar de prata com ametista">
-                        <p>Colar de Prata <br> R$ 220,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Colar de Prata', 220, 'imagens/colar.png')">Adicionar ao Carrinho</button>
+                        <p>Colar de Prata - R$ 220,00</p>
                     </a>
                 </li>
             </ul>
@@ -119,25 +120,22 @@
             <ul>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/relogio.png" alt="Relógio de pulso clássico com pulseira de couro">
-                        <p>Relógio Clássico <br> R$ 250,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Relógio Clássico', 250, 'imagens/relogio.png')">Adicionar ao Carrinho</button>
+                        <img class="img-lista" src="imagens/relogio.png"
+                            alt="Relógio de pulso clássico com pulseira de couro">
+                        <p>Relógio Clássico - R$ 250,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
                         <img class="img-lista" src="imagens/relogio.png" alt="Relógio esportivo com cronômetro">
-                        <p>Relógio Esportivo <br> R$ 300,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Relógio Esportivo', 300, 'imagens/relogio.png')">Adicionar ao Carrinho</button>
-
+                        <p>Relógio Esportivo - R$ 300,00</p>
                     </a>
                 </li>
                 <li class="produto">
                     <a href="#">
-                        <img class="img-lista" src="imagens/relogio.png" alt="Relógio de aço inoxidável com mostrador azul">
-                        <p>Relógio de Aço <br> R$ 350,00</p>
-                        <button class="add-to-cart-button" onclick="adicionarAoCarrinho('Relógio de Aço', 350, 'imagens/relogio.png')">Adicionar ao Carrinho</button>
-
+                        <img class="img-lista" src="imagens/relogio.png"
+                            alt="Relógio de aço inoxidável com mostrador azul">
+                        <p>Relógio de Aço - R$ 350,00</p>
                     </a>
                 </li>
             </ul>
@@ -146,14 +144,26 @@
 
     <hr class="separador">
 
-    <!-- Footer -->
-    <div id="footer"></div>
-    
-    <div id="notification" class="notification"></div>
+    <footer>
+        <p>&copy; 2024 Loja de Joias. Todos os direitos reservados.</p>
+        <p><a href="service_term.html">Termos de Serviço</a> | <a href="privacidade_term.html">Política de
+                Privacidade</a></p>
+        <div>
+            <a href="#"><img src="imagens/facebook.png" alt="Ícone do Facebook" style="width: 30px;"></a>
+            <a href="#"><img src="imagens/instagram.png" alt="Ícone do Instagram" style="width: 30px;"></a>
+            <a href="#"><img src="imagens/twitter.png" alt="Ícone do Twitter" style="width: 30px;"></a>
+        </div>
+    </footer>
 
-    <!-- Scripts -->
     <script src="js/carrossel.js"></script>
-    <script src="js/script.js"></script> <!-- Script responsável por carregar o header e footer -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

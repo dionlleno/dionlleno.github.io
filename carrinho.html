@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/pages/carrinho.css">
     <title>CARRINHO - PAINITE JOIAS</title>
+    <script src="js/script.js" defer></script>
 </head>
+<body onload="carregarCarrinho()">
+    <!-- Carrega o Header -->
+    <div id="header"></div>
 
-<body>
-    <header>
-        <a href="index.html"><img class="img-logo" src="logo.svg" alt="Logo da Loja de Joias" style="width: 250px;"></a>
-        <nav class="menu">
-            <ul class="menu-lista">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-            </ul>
-        </nav>
-        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-    </header>
-    <br>
+    <!-- Conteúdo Principal do Carrinho -->
     <div class="carrinho-container">
         <div class="carrinho">
             <h1>Carrinho de Compras</h1>
@@ -37,63 +28,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><img width="100px" src="imagens/anel.png" alt="Anel"></td>
-                        <td>Anel de Ouro</td>
-                        <td><input type="number" value="1" min="1" max="10"></td>
-                        <td>R$ 150,00</td>
-                        <td>R$ 150,00</td>
-                        <td><a href="#" class="button">Remover</a></td>
-                    </tr>
-                    <tr>
-                        <td><img width="100px" src="imagens/brincos.png" alt="Brinco"></td>
-                        <td>Brincos de Prata</td>
-                        <td><input type="number" value="2" min="1" max="10"></td>
-                        <td>R$ 80,00</td>
-                        <td>R$ 160,00</td>
-                        <td><a href="#" class="button">Remover</a></td>
-                    </tr>
-                    <tr>
-                        <td><img width="100px" src="imagens/colar.png" alt="Colar"></td>
-                        <td>Colar de Pérolas</td>
-                        <td><input type="number" value="1" min="1" max="10"></td>
-                        <td>R$ 200,00</td>
-                        <td>R$ 200,00</td>
-                        <td><a href="#" class="button">Remover</a></td>
-                    </tr>
+                    <!-- Itens do carrinho serão carregados aqui -->
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="4"><strong>Total</strong></td>
-                        <td>R$ 510,00</td>
+                        <td>R$ 0,00</td>
                         <td></td>
                     </tr>
                 </tfoot>
             </table>
-            <button class="button">Atualizar Carrinho</button>
-            <button class="button">Finalizar Compra</button>
+            <button class="button" onclick="continuarComprando()">Continuar Comprando</button>
+            <button class="button" onclick="finalizarCompra()">Finalizar Compra</button>
         </div>
     </div>
-    <br>
-    <hr class="separador">
-    <footer>
-        <p>&copy; 2024 Loja de Joias. Todos os direitos reservados.</p>
-        <p><a href="service_term.html">Termos de Serviço</a> | <a href="privacidade_term.html">Política de
-                Privacidade</a></p>
-        <div>
-            <a href="#"><img src="imagens/facebook.png" alt="Facebook" style="width: 30px;"></a>
-            <a href="#"><img src="imagens/instagram.png" alt="Instagram" style="width: 30px;"></a>
-            <a href="#"><img src="imagens/twitter.png" alt="Twitter" style="width: 30px;"></a>
-        </div>
-    </footer>
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
 
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+    <!-- Notificação Visual -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Carrega o Footer -->
+    <div id="footer"></div>
 </body>
-
 </html>
